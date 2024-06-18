@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=80"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "autoclicker-bot"
+version = "2.0.0"
+description = "Desktop auto clicker that records click paths and random click areas, then replays them as a task queue."
+requires-python = ">=3.10"
+dependencies = [
+    "pillow>=12.3,<13",
+    "pynput>=1.8.2",
+    "ttkbootstrap>=2.2.3,<3",
+]
+
+[project.gui-scripts]
+autoclicker = "controller:main"
+
+[tool.setuptools]
+py-modules = ["config", "controller"]
+packages = ["GUI", "Models"]
+
+[tool.setuptools.package-data]
+GUI = ["assets/*"]

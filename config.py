@@ -1,23 +1,21 @@
-SLEEP_CLICK = 0.15  # s / sleep time after each click
-SLEEP_STEP = 0.5  # s / sleep time after each step !! it will add up to SLEEP_CLICK
+from pathlib import Path
 
-# -------------------- BOT SETTING --------------------------
+ASSETS_DIR = Path(__file__).resolve().parent / "GUI" / "assets"
 
-N_ACCOUNT = 2  # how many account is there to use / just to know
-N_CLICKING_AIR_DROPS = 2  # how many clicking airdrop is there? / just to know
-T_MAX_RUN = []  # maximum time of running bot
-N_CLKS_EARN_LIST = []  # number of earn click for each clicking airdrop
-T_CLKS_EARN_LIST = []  # period time of earn click for each clicking airdrop
+CLICK_DELAY = 0.15
+STEP_DELAY = 0.5
+DEFAULT_DELAY = 5.0
+DEFAULT_RANDOM_CLICKS = 50
+EVENT_POLL_MS = 50
 
-# --------------------- View SETTING -------------------------
-
-THEME = 'darkly'
-APP_ICON = "View/app_icon.ico"
-IMAGE_LOGO = "View/app_logo.png"
+APP_TITLE = "Auto Clicker Tool"
+THEME = "bootstrap-dark"
+APP_ICON = ASSETS_DIR / "app_icon.ico"
+APP_LOGO = ASSETS_DIR / "app_logo.png"
 WINDOW_MIN_SIZE = (800, 600)
-LOGO_SCALE = 120
-GENERAL_PADDING = 20
+LOGO_SIZE = 120
+PADDING = 20
 BUTTON_WIDTH = 17
 TASK_WIDTH = 15
-TELEGRAM_CHANNEL_LINK = 't.me/parachute_gift_box'
-
+TASK_PANEL_WIDTH = 220
+TELEGRAM_CHANNEL_URL = "https://t.me/parachute_gift_box"
